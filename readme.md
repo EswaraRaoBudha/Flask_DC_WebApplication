@@ -58,10 +58,11 @@ follow the below steps to run the code
     - DC.js Code. 
         - car_dashboard.js: 
             you can see the code for how to draw DC charts and DC chart names are below.
-            ORIGIN_DIMPIE
-            HORSEPOWER_DimDonut 
-            CYLINDERS_Bar 
-> Note: we need to add above ids for <div> tag in html page where you want to attach DC charts. for this example, we added charts in dashboard.html
+		- ORIGIN_DIMPIE
+		- HORSEPOWER_DimDonut 
+		- CYLINDERS_Bar 
+
+> Note: we need to add above ids for **div** tag in html page where you want to attach DC charts. for this example, we added charts in dashboard.html
 
 ## Authors
 **_Eswara Rao Budha_**
