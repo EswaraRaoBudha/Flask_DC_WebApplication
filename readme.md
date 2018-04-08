@@ -4,7 +4,7 @@ The point of this project is sharing learning on building the DC web application
 # Requirements!
 
   - python 3.6.2 
-  - required modules are flask, functools, sqlite3
+  - required modules are flask,render_template,request,session,flash,redirect,url_for, sqlite3
 
 on the off chance that you don't have above modules in your machine, you can
 install using pip introduce. 
@@ -58,10 +58,10 @@ follow the below steps to run the code
     - DC.js Code. 
         - car_dashboard.js: 
             you can see the code for how to draw DC charts and DC chart names are below.
-            ORIGIN_DIMPIE
-            HORSEPOWER_DimDonut 
-            CYLINDERS_Bar 
-> Note: we need to add above ids for <div> tag in html page where you want to attach DC charts. for this example, we added charts in dashboard.html
+				- ORIGIN_DIMPIE
+				- HORSEPOWER_DimDonut
+				- CYLINDERS_Bar 
+> Note: we need to add above ids for **div** tag in html page where you want to attach DC charts. for this example, we added charts in dashboard.html
 
 ## Authors
 **_Eswara Rao Budha_**
