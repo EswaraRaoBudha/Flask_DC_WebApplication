@@ -1,3 +1,8 @@
+//###########################
+//ESWARA RAO BUDHA
+//DC CHARTS WITH CARS DATA
+//##########################
+
          function findingMaxMpgCar(v_json, code) {
              return v_json.filter(
                  function(data) {
@@ -110,8 +115,8 @@
                  .x(d3.scale.ordinal())
                  .xUnits(dc.units.ordinal)
                  .brushOn(false)
-                 .xAxisLabel('Hourly Sales')
-                 .yAxisLabel('Order Nos')
+                 .xAxisLabel('Engine Type')
+                 .yAxisLabel('Made Count')
                  .dimension(CYLINDERS_BarDim)
                  .barPadding(0.1)
                  .outerPadding(0.05)
@@ -122,6 +127,9 @@
                      left: 80
                  })
                  .group(CYLINDERS_BarDimGrp)
+				 .keyAccessor(function (d) {
+                return "V "+d.key;
+				})
                  .elasticY(true);
          
          		CYLINDERS_Bar.render();
@@ -139,12 +147,19 @@
                  .width(240)
                  .dimension(HORSEPOWER_Dim)
                  .group(HORSEPOWER_DimGrp)
-                 .legend(dc.legend())
-                 .renderLabel(false)
+				 .keyAccessor(function (d) {
+                return "HP "+d.key;
+            })
+                 .legend(dc.legend().legendText(function(d) {
+					return "HP "+d.name;
+					}))
+				 
+				.renderLabel(false)
          		.innerRadius(20);
                   ORIGIN_DIMPIE.render();
-         		 
+				  
+        		 
          		HORSEPOWER_DimDonut.render();
          		
              }
-         );
+         );	
